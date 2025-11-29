@@ -1,0 +1,410 @@
+/* =========================
+   Basic Reset
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* =========================
+   Page Background + Base
+========================= */
+body {
+    background: radial-gradient(circle at top, #1d2b55 0, #020617 45%, #000000 100%);
+    color: #e5e7eb;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+/* Layout helpers */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+/* Let gradient show (no solid grey block) */
+.section-soft {
+    background: transparent;
+}
+
+.section-title {
+    font-size: 1.9rem;
+    margin-bottom: 6px;
+    color: #f9fafb;
+}
+
+.section-subtitle {
+    color: #9ca3af;
+    max-width: 540px;
+}
+
+/* =========================
+   Header & Navigation
+========================= */
+header {
+    background: rgba(2, 6, 23, 0.8);
+    /* semi-transparent */
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 42px;
+}
+
+/* Nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 0.95rem;
+    padding: 4px 12px;
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(37, 99, 235, 0.25);
+    color: #bfdbfe;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* =========================
+   Buttons
+========================= */
+.btn {
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition:
+        opacity 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s,
+        background 0.2s,
+        border-color 0.2s;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.btn-outline {
+    background: transparent;
+    border-color: #60a5fa;
+    color: #e5e7eb;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: #e5e7eb;
+}
+
+.btn-light {
+    background: #e5e7eb;
+    color: #020617;
+}
+
+.btn:hover {
+    opacity: 0.96;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.8);
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero {
+    padding-top: 50px;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 30px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+    color: #f9fafb;
+}
+
+.hero-subtitle {
+    color: #9ca3af;
+    margin-bottom: 16px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.hero-note {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+/* Hero card area */
+.hero-panel {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-card {
+    width: 100%;
+    max-width: 320px;
+}
+
+/* =========================
+   Cards & Grids (Glassmorphism)
+========================= */
+.card {
+    background: rgba(15, 23, 42, 0.85);
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s,
+        background 0.2s;
+    color: #e5e7eb;
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.9);
+    border-color: #60a5fa;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.card-main {
+    border: 2px solid #60a5fa;
+}
+
+/* Pricing text */
+.price {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    color: #f9fafb;
+}
+
+.currency {
+    font-size: 1rem;
+    vertical-align: top;
+}
+
+.period {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+.feature-list {
+    list-style: none;
+    margin-top: 6px;
+}
+
+.feature-list li {
+    font-size: 0.95rem;
+    color: #d1d5db;
+    margin-bottom: 4px;
+}
+
+/* Hero file list */
+.file-list {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.file-list li {
+    padding: 4px 0;
+    font-size: 0.95rem;
+}
+
+.small {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+/* =========================
+   Contact Section
+========================= */
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 20px;
+}
+
+.info-line {
+    margin-top: 10px;
+    font-size: 0.96rem;
+}
+
+.contact-form label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: block;
+    margin-top: 8px;
+    color: #e5e7eb;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 4px;
+    border-radius: 8px;
+    border: 1px solid #4b5563;
+    font-size: 0.9rem;
+    background: rgba(15, 23, 42, 0.9);
+    color: #e5e7eb;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #6b7280;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #60a5fa;
+}
+
+.form-note {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+    background: transparent;
+    color: #9ca3af;
+    padding: 16px 0 20px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(55, 65, 81, 0.7);
+}
+
+.footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #9ca3af;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #e5e7eb;
+}
+
+/* =========================
+   Animations
+========================= */
+.section,
+.hero-card,
+.card {
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   Responsive Tweaks
+========================= */
+@media (max-width: 768px) {
+
+    .hero-layout,
+    .contact-layout,
+    .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .nav-bar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+}
